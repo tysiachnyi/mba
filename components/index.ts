@@ -6,3 +6,5 @@ export * from "./HapticTab";
 export * from "./ParallaxScrollView";
 export * from "./HelloWave";
 export * from "./BudgetCard";
+export * from "./PrimaryButton";
+export * from "./Container";

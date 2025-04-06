@@ -7,7 +7,7 @@ type Props = PropsWithChildren & {
   title?: string;
 };
 
-export default function Container({ title, children }: Props) {
+export function Container({ title, children }: Props) {
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <ThemedView style={styles.container}>

@@ -1,41 +1,21 @@
-import { StyleSheet, ScrollView, FlatList } from "react-native";
+import { StyleSheet } from "react-native";
 
-import { BudgetCard, ThemedText, ThemedView } from "@/components";
-import Container from "@/components/Container";
-import { useState } from "react";
-
-const mockData = [
-  {
-    title: "April 2025",
-    savings: "$1,200",
-    expenses: "$3,800",
-  },
-  {
-    title: "March 2025",
-    savings: "$1,200",
-    expenses: "$3,800",
-  },
-  {
-    title: "February 2025",
-    savings: "$1,200",
-    expenses: "$3,800",
-  },
-  {
-    title: "January 2025",
-    savings: "$1,200",
-    expenses: "$3,800",
-  },
-];
+import { Collapsible, ThemedText, ThemedView, Container } from "@/components";
 
 export default function TabTwoScreen() {
-  const [budgets, setBudgets] = useState(mockData);
-
-  const renderBudgetCards = () => {
-    return budgets.map((budget, index) => (
-      <BudgetCard key={index} {...budget} />
-    ));
-  };
-  return <Container title="Explore">{renderBudgetCards()}</Container>;
+  return (
+    <Container title="FAQ">
+      <ThemedText>FAQ</ThemedText>
+      <ThemedView style={styles.faqItem}>
+        <Collapsible title="How to use?">
+          <ThemedText type="default">
+            Just use the app by navigating through the tabs. Each section
+            provides specific functionality to help you learn.
+          </ThemedText>
+        </Collapsible>
+      </ThemedView>
+    </Container>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -44,5 +24,8 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
     flexDirection: "row",
     gap: 8,
+  },
+  faqItem: {
+    paddingVertical: 8,
   },
 });
