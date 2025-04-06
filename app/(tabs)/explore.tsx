@@ -4,8 +4,7 @@ import { Collapsible, ThemedText, ThemedView, Container } from "@/components";
 
 export default function TabTwoScreen() {
   return (
-    <Container title="FAQ">
-      <ThemedText>FAQ</ThemedText>
+    <Container title="Explore">
       <ThemedView style={styles.faqItem}>
         <Collapsible title="How to use?">
           <ThemedText type="default">

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { BudgetCard, Container, PrimaryButton } from "@/components";
+import { BudgetCard, Container, PrimaryButton, ThemedView } from "@/components";
 
 import { useState } from "react";
 import { useRouter } from "expo-router";
@@ -42,9 +42,15 @@ export default function HomeScreen() {
     ));
   };
   return (
-    <Container title="Explore">
-      <PrimaryButton color="black" title="Add new" onPress={handlePress} />
+    <Container title="Home">
+      <ThemedView style={styles.buttonView}>
+        <PrimaryButton color="black" title="Add new" onPress={handlePress} />
+      </ThemedView>
       {renderBudgetCards()}
     </Container>
   );
 }
+
+const styles = StyleSheet.create({
+  buttonView: { paddingBottom: 20 },
+});

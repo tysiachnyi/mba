@@ -46,13 +46,13 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="faq"
+        name="auth"
         options={{
-          title: "Faq",
+          title: "User",
           tabBarIcon: ({ color }: { color: string }) => (
             <IconSymbol
               size={28}
-              name="questionmark.bubble.fill"
+              name="person.2.badge.key.fill"
               color={color}
             />
           ),
