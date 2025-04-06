@@ -2,7 +2,6 @@ import { Text, View, StyleSheet, Platform } from "react-native";
 
 export function BudgetCard({
   title = "Monthly Budget",
-  subTitle = "April 2025",
   savings = "$1,200",
   expenses = "$3,800",
 }) {
@@ -10,7 +9,6 @@ export function BudgetCard({
     <View style={styles.card}>
       <View style={styles.headerContainer}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subtitle}>{subTitle}</Text>
       </View>
 
       <View style={styles.dataContainer}>
@@ -49,10 +47,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "700",
     color: "#1E293B",
-  },
-  subtitle: {
-    fontSize: 14,
-    color: "#64748B",
+    padding: 8,
   },
   dataContainer: {
     flexDirection: "row",

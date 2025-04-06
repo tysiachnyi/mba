@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     marginBottom: 24,
     fontSize: 24,
     fontWeight: "bold",
-    textAlign: "center",
+    textAlign: "left",
   },
   faqItem: {
     paddingVertical: 8,
